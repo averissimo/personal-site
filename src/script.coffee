@@ -16,6 +16,11 @@ jQuery ->
     dataType: "json",
     url: "./data/Info.json",
     success: (data)->
+      $('title').render(data.person,title_directive)
+      $('meta[name=author]').render(data.person,meta_directive)
+      $('meta[name=description]').render(data.person,meta_description_directive)
+      $('meta[name=keywords]').render(data.person,meta_keywords_directive)
+      #
       $('div#photo').autoRender(data.person)
       $('div#who').autoRender(data.person)
       $('div#contact').autoRender(data.contact)
@@ -37,7 +42,27 @@ jQuery ->
     prefix  = "" if typeof(prefix) == "undefined"
     suffix  = "" if typeof(suffix) == "undefined"
     prefix + content + suffix
- 
+  
+  title_directive = {     
+    '+.': (args) ->
+          args.context.name
+  }
+
+  meta_directive = {     
+    '.@content': (args) ->
+          args.context.name
+  }
+
+  meta_description_directive = {     
+    '.@content+': (args) ->
+          args.context.name
+  }
+
+  meta_keywords_directive = {     
+    '.@content': (args) ->
+          args.context.keywords
+  }
+
   edu_directive = { 
     'li.education': {
       'education<-education': {

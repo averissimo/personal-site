@@ -6,3 +6,4 @@ markdown-js
 static/email.*
 static/profile.*
 .sass-cache
+dist/
