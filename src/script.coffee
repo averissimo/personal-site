@@ -1,7 +1,7 @@
 jQuery ->
   $.ajax {
     dataType: "html",
-    url: "./description.md",
+    url: "./data/description.md",
     success: (data)->
       $('#description').html( markdown.toHTML(data))
       
@@ -14,7 +14,7 @@ jQuery ->
   #
   $.ajax {
     dataType: "json",
-    url: "./Info.json",
+    url: "./data/Info.json",
     success: (data)->
       $('div#photo').autoRender(data.person)
       $('div#who').autoRender(data.person)
@@ -96,7 +96,7 @@ jQuery ->
   #
   $.ajax {
     dataType: "json",
-    url: "./Journal.json",
+    url: "./data/Journal.json",
     success: (data)->
       new_data = {
         "articles": data
@@ -111,7 +111,7 @@ jQuery ->
   #
   $.ajax {
     dataType: "json",
-    url: "./Oral.json",
+    url: "./data/Oral.json",
     success: (data)->
       new_data = {
         "articles": data
@@ -126,7 +126,7 @@ jQuery ->
   #
   $.ajax {
     dataType: "json",
-    url: "./Poster.json",
+    url: "./data/Poster.json",
     success: (data)->
       new_data = {
         "articles": data
@@ -141,7 +141,7 @@ jQuery ->
   #
   $.ajax {
     dataType: "json",
-    url: "./Invited.json",
+    url: "./data/Invited.json",
     success: (data)->
       new_data = {
         "articles": data

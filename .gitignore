@@ -2,3 +2,8 @@ lib
 pure
 *.json
 *~
+data
+markdown-js
+static/email.*
+static/profile.*
+.sass-cache
