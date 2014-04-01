@@ -24,6 +24,7 @@ jQuery ->
       $('div#projects').autoRender(data)
       $('div#experience').autoRender(data)
       $('div.last_updated').autoRender(data)
+      $('div#logos').autoRender(data)
   }
 
   #
@@ -59,7 +60,17 @@ jQuery ->
     'li.article-item': {
       'article<-articles': {
         '.title   span': (args) -> write_content(".title"   , @title)
-        '.journal span': (args) -> write_content(".journal" , @["container-title"])
+        '.journal span': (args) -> 
+          title = if typeof(@["container-title"]) != "undefined"
+            @["container-title"]
+          else if typeof(@["event"]) != "undefined"
+            @["event"] + if typeof(@["event-place"]) != "undefined"
+              ", " + @["event-place"]
+            else
+              ""
+          else
+            ""
+          write_content(".journal" , title)
         '.pages   span': (args) -> write_content(".page"    , @page)
         '.volume  span': (args) -> write_content(".volume"  , @volume)
         '.issue   span': (args) -> write_content(".issue"   , @issue)

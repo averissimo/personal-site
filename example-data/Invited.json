@@ -1,0 +1,29 @@
+[
+	{
+		"id": 638,
+		"type": "paper-conference",
+		"title": "Title of the paper",
+		"publisher-place": "Where",
+		"event": "Name",
+		"event-place": "where",
+		"author": [
+			{
+				"family": "1",
+				"given": "Author"
+			},
+			{
+				"family": "2",
+				"given": "Authro"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2012",
+					7,
+					25
+				]
+			]
+		}
+	}
+]

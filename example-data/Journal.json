@@ -1,0 +1,84 @@
+[
+	{
+		"id": 87,
+		"type": "article-journal",
+		"title": "Title 2021",
+		"container-title": "Journal title",
+		"page": "283-293",
+		"volume": "18",
+		"issue": "4",
+		"source": "SpringerLink",
+		"abstract": "...",
+		"URL": "http://www.example.com",
+		"DOI": "10.9999/s99999-011-0248-7",
+		"ISSN": "0942-9999",
+		"shortTitle": "....",
+		"author": [
+			{
+				"family": "1",
+				"given": "Author"
+			},
+			{
+				"family": "2",
+				"given": "Author"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2012"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2012",
+					6,
+					29
+				]
+			]
+		}
+	},
+	{
+		"id": 87,
+		"type": "article-journal",
+		"title": "Title 2011",
+		"container-title": "Journal title",
+		"page": "283-293",
+		"volume": "18",
+		"issue": "4",
+		"source": "SpringerLink",
+		"abstract": "...",
+		"URL": "http://www.example.com",
+		"DOI": "10.9999/s99999-011-0248-7",
+		"ISSN": "0942-9999",
+		"shortTitle": "....",
+		"author": [
+			{
+				"family": "1",
+				"given": "Author"
+			},
+			{
+				"family": "2",
+				"given": "Author"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2011"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2012",
+					6,
+					29
+				]
+			]
+		}
+	}
+]

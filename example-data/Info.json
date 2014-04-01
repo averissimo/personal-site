@@ -1,0 +1,121 @@
+{
+    "last_updated": "Last updated at April 2014",
+    "person": {
+      "name": "My name",
+      "position": "My position",
+      "photo": "data/static/profile.jpg",
+      "affiliations": [
+          {
+              "name": "Affil1",
+              "site": "http://example.com"
+          },
+          {
+              "name": "Affil2",
+              "site": "http://example.com"
+          }
+      ]
+    },
+    "contact": {
+      "email": "data/static/email.png",
+      "email_alt": "alternative text",
+      "address": "address 1, World",
+      "office": "<span class='dark-gray'>(+351)</span> 211 111 111",
+    
+      "cv": [
+            {
+                "name": "Professional CV",
+                "site": "http://pt.linkedin.com/",
+                "class": "linkedin"
+            },
+            {
+                "name": "Open source contributions",
+                "site": "https://github.com/"
+            }
+      ]
+    },
+    "links": [
+        {
+            "name": "Link 1",
+            "description": "(app)",
+            "site": "http://example.com"
+        },
+        {
+            "name": "Link 2",
+            "description": "(website & wiki)",
+            "site": "http://example.com"
+        },
+        {
+            "name": "Link 3",
+            "description": "Link 3",
+            "site": "http://example.com"
+        }
+    ],
+    "logos": [
+      {
+        "name": "Logo 1",
+        "logo": "data//static/a.jpg",
+        "site": "http://example.com"
+      },
+      {
+        "name": "Logo 2",
+        "logo": "data//static/b.png",
+        "site": "http://example.com"
+      },
+      {
+        "name": "Logo 3",
+        "logo": "data//static/c.png",
+        "site": "http://example.com"
+      }
+    ],    
+    "experience": [
+        {
+            "title": "Exp1",
+            "range": "Oct. 2012 - Sep. 2013",
+            "where": "Company A",
+            "site": "http://example.com",
+            "description": "This description"
+        },
+        {
+            "title": "Exp 2",
+            "range": "Oct. 2011 - Sep. 2012",
+            "where": "Company B",
+            "site": "http://example.com",
+            "description": "This description"
+        }
+    ],
+    "education": [
+        {
+            "description": "Master in ...",
+            "thesis-title": "Thesis",
+            "supervisor": "Prof. Einstein",
+            "range": "Graduated in 2009",
+            "where": "Técnico Lisboa, University of Lisbon",
+            "site": "http://tecnico.ulisboa.pt"
+        },
+        {
+            "description": "Bachelor in ...",
+            "range": "Graduated in 2008",
+            "where": "Técnico Lisboa, University of Lisbon",
+            "site": "http://tecnico.ulisboa.pt"
+        }
+    ],
+    "project": [
+        {
+          "name": "Project 1",
+          "site": "https://example.com",
+          "range": "Nov. 2013 to Oct. 2016",
+          "description": "..."
+        },
+        {
+            "name": "Project 2",
+            "range": "Apr. 2013 - Mar. 2014",
+            "site": "https://example.com",
+            "description": "..."
+        },
+        {
+            "name": "Project 3",
+            "range": "Jun. 2013 - May 2015",
+            "description": "..."
+        }
+    ]
+}
