@@ -22,6 +22,7 @@ jQuery ->
       $('div#links').autoRender(data)
       $('div#education').render(data,edu_directive)
       $('div#projects').autoRender(data)
+      $('div#experience').autoRender(data)
       $('div.last_updated').autoRender(data)
   }
 

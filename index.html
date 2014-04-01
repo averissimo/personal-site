@@ -1,197 +1,203 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- remove after generated -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./pure/libs/pure.js"></script>
+    <script src="./lib/script.js"></script>
+    <script src="./markdown-js/dist/markdown.min.js"></script>
 
-<head>
+    <!-- do not remove! -->    
+    <link rel="stylesheet" type="text/css" href="lib/style.css" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,300' rel='stylesheet' type='text/css'>
+  </head>
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="./pure/libs/pure.js"></script>
-<script src="./lib/script.js"></script>
+  <body>
 
-<script src="./markdown-js/dist/markdown.min.js"></script>
+    <div id="content">
 
-<link rel="stylesheet" type="text/css" href="lib/style.css" media="screen" />
-<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,300' rel='stylesheet' type='text/css'>
+      <div id="photo"><img class="name@alt photo@src"/></div>
+      
+      <div id="information">
+        <div id="who">
+            <h1 class="name"></h1>
+            <h4 class="position"></h1>
+            <ol id="affiliations">
+              <li class="affiliations">
+                <a class="name site@href"></a>
+              </li>
+            </ol>
 
-</head>
+        </div>
 
-<body>
+        <div id="contact">
+          <ol>
+            <li class="address"></li>
+            <li class="office"></li>
+            <li><img class="email_alt@alt email@src"/></li>
+          </ol>
 
-<div id="content">
+          <ol class="cv-links">
+            <li class="cv class@class"><a class="name site@href"></a></li>
+          </ol>
+        </div>
 
-  <div id="photo"><img class="name@alt photo@src"/></div>
-  
-  <div id="information">
-    <div id="who">
-        <h1 class="name"></h1>
-        <h4 class="position"></h1>
-        <ol id="affiliations">
-          <li class="affiliations">
-            <a class="name site@href"></a>
+      </div>
+      <div style="clear:both"></div>  
+
+      <div id="description"></div>
+      
+      <h2 class="light">Applications & designs</h2>
+      <div id="links">
+        <ol class="inline-block">
+          <li class="links"><a class="name site@href"></a><span class="dark-gray description"></span></li>
+        </ol>
+      </div>
+
+      <h2>Education</h2>
+      <div id="education">
+        <ol>
+          <li class="education">
+            <ol>        
+              <li class="range"></li>
+              <hr class="subtitle"/>
+              <li><a class="where site@href"></a></li>
+              <li class="description"></li>
+              <li data-prefix="<span class='dark-gray'>Title:</span> "      class="thesis-title"></li>
+              <li data-prefix="<span class='dark-gray'>Supervisor:</span> " class="supervisor"></li>
+              <li data-prefix="<span class='dark-gray'>Co-supervisor:</span> " class="co-supervisor"></li>
+            <ol>
           </li>
         </ol>
+      </div>
 
+      <div style="clear:both"></div>  
+
+      <h2>Projects</h2>
+
+      <div id="projects">
+        <ol>
+          <li class="project">
+            <span><a class="name site@href"></a></span>
+            - <span class="range light"></span> -
+            <span class="description"></span>
+          </li>
+        </ol>
+      </div>
+
+      <h2>Publications</h2>
+
+      <h3>Journal</h3>
+      <hr class="subtitle"/>
+
+      <div id="journals">
+        <ol class="articles-list">
+          <li class="article-item">
+            <ol class="inline">
+              <li class="author">
+                <span data-suffix="," class="family-name"></span>
+                <span data-suffix=";" class="given-name"></span>
+              </li>        
+              <li class="title" data-prefix='"' data-suffix='".'>       <span></span></li>
+              <li class="journal" data-suffix=".">                      <span></span></li>
+              <li class="series">                                       <span></span></li>
+              <li class="volume" data-prefix="Volume " data-suffix=","> <span></span></li>
+              <li class="issue">                                        <span></span></li>
+              <li class="year" data-prefix="(" data-suffix=")">         <span></span></li>
+              <li class="pages" data-prefix="page ">                    <span></span></li>
+              <li class="url">                                          <a href=""></a><li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+
+      <h3>Conference</h3>
+      <hr class="subtitle"/>
+
+      <div id="conferences">
+        <ol class="articles-list inline">
+          <li class="article-item">
+            <ol>
+              <li class="author">
+                <span class="family-name"></span>
+                <span data-suffix="," class="given-name"></span>
+              </li>        
+              <li class="title" data-prefix='"' data-suffix='".'>       <span></span></li>
+              <li class="journal" data-suffix=".">                      <span></span></li>
+              <li class="series">                                       <span></span></li>
+              <li class="volume" data-prefix="Volume " data-suffix=","> <span></span></li>
+              <li class="issue">                                        <span></span></li>
+              <li class="year" data-prefix="(" data-suffix=")">         <span></span></li>
+              <li class="pages" data-prefix="page ">                    <span></span></li>
+              <li class="url">                                          <a href=""></a><li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+
+      <h3>Poster</h3>
+      <hr class="subtitle"/>
+
+      <div id="posters">
+        <ol class="articles-list inline">
+          <li class="article-item">
+            <ol>
+              <li class="author">
+                <span class="family-name"></span>
+                <span data-suffix="," class="given-name"></span>
+              </li>        
+              <li class="title" data-prefix='"' data-suffix='".'>       <span></span></li>
+              <li class="journal" data-suffix=".">                      <span></span></li>
+              <li class="series">                                       <span></span></li>
+              <li class="volume" data-prefix="Volume " data-suffix=","> <span></span></li>
+              <li class="issue">                                        <span></span></li>
+              <li class="year" data-prefix="(" data-suffix=")">         <span></span></li>
+              <li class="pages" data-prefix="page ">                    <span></span></li>
+              <li class="url">                                          <a href=""></a><li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+
+      <h3>Invited talks</h3>
+      <hr class="subtitle"/>
+
+      <div id="invited-talks">
+        <ol class="articles-list inline">
+          <li class="article-item">
+            <ol>
+              <li class="author">
+                <span class="family-name"></span>
+                <span data-suffix="," class="given-name"></span>
+              </li>        
+              <li class="title" data-prefix='"' data-suffix='".'>       <span></span></li>
+              <li class="journal" data-suffix=".">                      <span></span></li>
+              <li class="series">                                       <span></span></li>
+              <li class="volume" data-prefix="Volume " data-suffix=","> <span></span></li>
+              <li class="issue">                                        <span></span></li>
+              <li class="year" data-prefix="(" data-suffix=")">         <span></span></li>
+              <li class="pages" data-prefix="page ">                    <span></span></li>
+              <li class="url">                                          <a href=""></a><li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+
+      <h2>Professional Experience</h2>
+      <div id="experience">
+        <ol>
+          <li class="experience">
+            <ol>        
+              <li class="range"></li>
+              <li><span class="title h4"></span> at <a class="where site@href"></a></li>
+              <hr class="subtitle"/>
+              <li class="description"></li>
+            <ol>
+          </li>
+        </ol>
+      </div>
+
+      <div class="last_updated"></div>
     </div>
-
-    
-    <div id="contact">
-      <ol>
-        <li class="address"></li>
-        <li class="office"></li>
-        <li><img class="email_alt@alt email@src"/></li>
-      </ol>
-
-      <ol class="cv-links">
-        <li class="cv class@class"><a class="name site@href"></a></li>
-      </ol>
-    </div>
-
-  </div>
-  <div style="clear:both"></div>  
-
-  <div id="description"></div>
-  
-  <h3>Applications & designs</h3>
-  <div id="links">
-    <ol class="inline-block">
-      <li class="links"><a class="name site@href"></a></li>
-    </ol>
-  </div>
-
-  <h2>Education</h2>
-  <div id="education">
-    <ol>
-      <li class="education">
-        <ol>        
-          <li class="range"></li>
-          <hr class="subtitle"/>
-          <li><a class="where site@href"></a></li>
-          <li class="description"></li>
-          <li data-prefix="<span class='dark-gray'>Title:</span> "      class="thesis-title"></li>
-          <li data-prefix="<span class='dark-gray'>Supervisor:</span> " class="supervisor"></li>
-          <li data-prefix="<span class='dark-gray'>Co-supervisor:</span> " class="co-supervisor"></li>
-        <ol>
-      </li>
-    </ol>
-  </div>
-
-  <div style="clear:both"></div>  
-
-  <h2>Projects</h2>
-
-  <div id="projects">
-    <ol>
-      <li class="project">
-        <span><a class="name site@href"></a></span>
-        - <span class="range dark-gray"></span> -
-        <span class="description"></span>
-      </li>
-    </ol>
-  </div>
-
-
-  <h2>Publications</h2>
-
-  <h3>Journal</h3>
-  <hr class="subtitle"/>
-
-  <div id="journals">
-    <ol class="articles-list">
-      <li class="article-item">
-        <ol class="inline">
-          <li class="author">
-            <span data-suffix="," class="family-name"></span>
-            <span data-suffix=";" class="given-name"></span>
-          </li>        
-          <li class="title" data-prefix='"' data-suffix='".'>       <span></span></li>
-          <li class="journal" data-suffix=".">                      <span></span></li>
-          <li class="series">                                       <span></span></li>
-          <li class="volume" data-prefix="Volume " data-suffix=","> <span></span></li>
-          <li class="issue">                                        <span></span></li>
-          <li class="year" data-prefix="(" data-suffix=")">         <span></span></li>
-          <li class="pages" data-prefix="page ">                    <span></span></li>
-          <li class="url">                                          <a href=""></a><li>
-        </ol>
-      </li>
-    </ol>
-  </div>
-
-
-  <h3>Conference</h3>
-  <hr class="subtitle"/>
-
-  <div id="conferences">
-    <ol class="articles-list inline">
-      <li class="article-item">
-        <ol>
-          <li class="author">
-            <span class="family-name"></span>
-            <span data-suffix="," class="given-name"></span>
-          </li>        
-          <li class="title" data-prefix='"' data-suffix='".'>       <span></span></li>
-          <li class="journal" data-suffix=".">                      <span></span></li>
-          <li class="series">                                       <span></span></li>
-          <li class="volume" data-prefix="Volume " data-suffix=","> <span></span></li>
-          <li class="issue">                                        <span></span></li>
-          <li class="year" data-prefix="(" data-suffix=")">         <span></span></li>
-          <li class="pages" data-prefix="page ">                    <span></span></li>
-          <li class="url">                                          <a href=""></a><li>
-        </ol>
-      </li>
-    </ol>
-  </div>
-
-  <h3>Poster</h3>
-  <hr class="subtitle"/>
-
-  <div id="posters">
-    <ol class="articles-list inline">
-      <li class="article-item">
-        <ol>
-          <li class="author">
-            <span class="family-name"></span>
-            <span data-suffix="," class="given-name"></span>
-          </li>        
-          <li class="title" data-prefix='"' data-suffix='".'>       <span></span></li>
-          <li class="journal" data-suffix=".">                      <span></span></li>
-          <li class="series">                                       <span></span></li>
-          <li class="volume" data-prefix="Volume " data-suffix=","> <span></span></li>
-          <li class="issue">                                        <span></span></li>
-          <li class="year" data-prefix="(" data-suffix=")">         <span></span></li>
-          <li class="pages" data-prefix="page ">                    <span></span></li>
-          <li class="url">                                          <a href=""></a><li>
-        </ol>
-      </li>
-    </ol>
-  </div>
-
-  <h3>Invited talks</h3>
-  <hr class="subtitle"/>
-
-  <div id="invited-talks">
-    <ol class="articles-list inline">
-      <li class="article-item">
-        <ol>
-          <li class="author">
-            <span class="family-name"></span>
-            <span data-suffix="," class="given-name"></span>
-          </li>        
-          <li class="title" data-prefix='"' data-suffix='".'>       <span></span></li>
-          <li class="journal" data-suffix=".">                      <span></span></li>
-          <li class="series">                                       <span></span></li>
-          <li class="volume" data-prefix="Volume " data-suffix=","> <span></span></li>
-          <li class="issue">                                        <span></span></li>
-          <li class="year" data-prefix="(" data-suffix=")">         <span></span></li>
-          <li class="pages" data-prefix="page ">                    <span></span></li>
-          <li class="url">                                          <a href=""></a><li>
-        </ol>
-      </li>
-    </ol>
-  </div>
-
-
-  <div class="last_updated"></div>
-
-</div>
-
-</body>
-
+  </body>
 </html>

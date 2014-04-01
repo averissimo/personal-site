@@ -13,6 +13,10 @@ h1,h2,h3,h4 {
   margin-bottom: 0px;
 }
 
+h3, .light {
+  font-weight: 300;
+}
+
 ol {
   margin-top: 0px;
 }
@@ -64,12 +68,25 @@ ol {
   float: left;
 }
 
+#education, #projects, #links, .experience {
+  margin-top: 1.2em;
+}
+
+.h4 {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+#projects .name {
+  font-weight: 700;
+}
+
 img.photo {
   padding: 4px;
   border: 1px solid #eee;
 }
 
-a {
+a[href] {
   text-decoration: none;
   color: $blue;
   &:visited, &:active {
@@ -112,7 +129,7 @@ ol,ul {
   li {
     list-style-type: none;
     .article-item &.title {
-      @extend .strong;
+      font-weight: 500;
     }
     &.journal {
       @extend .italic;
