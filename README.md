@@ -1,12 +1,14 @@
 Personal Site
 =============
 
-Requirements:
+[Example](http://web.tecnico.ulisboa.pt/andre.verissimo)
+
+## Requirements:
 
 - [markdown-js](https://github.com/evilstreak/markdown-js)
 - [pure](https://github.com/pure/pure)
 
-Necessary files:
+## Necessary files:
 
 1. data/description.md - markdown with description
 1. data/Journal.json - Export from Zotero CSL JSON
@@ -16,4 +18,6 @@ Necessary files:
 
 example files can be found at "example-data" folder
 
-[Example](http://web.tecnico.ulisboa.pt/andre.verissimo)
+## Usage
+
+You can use it to load content dynamically or generate html locally and use it.
