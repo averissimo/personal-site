@@ -1,10 +1,149 @@
 jQuery ->
   $.ajax {
+    dataType: "html",
+    url: "./description.md",
+    success: (data)->
+      $('#description').html( markdown.toHTML(data))
+      
+  }
+
+  #
+  #
+  #
+  # Info
+  #
+  $.ajax {
+    dataType: "json",
+    url: "./Info.json",
+    success: (data)->
+      $('div#photo').autoRender(data.person)
+      $('div#who').autoRender(data.person)
+      $('div#contact').autoRender(data.contact)
+      $('div#links').autoRender(data)
+      $('div#education').render(data,edu_directive)
+      $('div#projects').autoRender(data)
+      $('div.last_updated').autoRender(data)
+  }
+
+  #
+  # lookup for data-prefix and data-suffix in the el
+  write_content = (el,content) ->
+    return "" if jQuery.trim(content) == ""
+    element = $(el)
+    prefix  = element.data("prefix")
+    suffix  = element.data("suffix")
+    prefix  = "" if typeof(prefix) == "undefined"
+    suffix  = "" if typeof(suffix) == "undefined"
+    prefix + content + suffix
+ 
+  edu_directive = { 
+    'li.education': {
+      'education<-education': {
+        '.description'  : (args) -> write_content(".description"  , @["description"])
+        '.thesis-title' : (args) -> write_content(".thesis-title" , @["thesis-title"])
+        '.supervisor'   : (args) -> write_content(".supervisor"   , @["supervisor"])
+        '.co-supervisor': (args) -> write_content(".co-supervisor", @["co-supervisor"])
+        '.range'        : (args) -> write_content(".range"        , @["range"])
+        '.where'        : (args) -> write_content(".where"        , @["where"])
+        '.where@href'   : 'education.site'
+      }
+    }
+  }
+  
+  #
+  #
+  # Article directive for templating
+  # 
+  directive = { 
+    'li.article-item': {
+      'article<-articles': {
+        '.title   span': (args) -> write_content(".title"   , @title)
+        '.journal span': (args) -> write_content(".journal" , @["container-title"])
+        '.pages   span': (args) -> write_content(".page"    , @page)
+        '.volume  span': (args) -> write_content(".volume"  , @volume)
+        '.issue   span': (args) -> write_content(".issue"   , @issue)
+        '.series  span': (args) -> write_content(".series"  , @series)
+
+        '.year span': (args) ->
+          args.article.item.issued["date-parts"][0][0]
+
+        'li.author': {
+          'author_name<-article.author': {
+            '.family-name': (args)-> write_content(".family-name", @family)
+            '.given-name' : (args)-> write_content(".given-name" , @given)
+          }
+        }
+        
+        '.url a': (args)->
+          if typeof(@DOI) != "undefined"
+            @DOI
+          else if typeof(@URL) != "undefined"
+            "link"
+          else
+            ""
+        '.url a@href':'article.URL'
+      }
+      sort: (a,b)->
+        a.issued["date-parts"][0][0] < b.issued["date-parts"][0][0] ? 1 : -1
+    }
+  }
+
+  #
+  #
+  #
+  # Journals
+  #
+  $.ajax {
     dataType: "json",
     url: "./Journal.json",
     success: (data)->
-      directive = { 'a':'who', 'a@href':'site' };        
-      $('ol#animals').autoRender(data)
+      new_data = {
+        "articles": data
+      }
+      $('div#journals ol.articles-list').render(new_data,directive)
+  }
+  
+  #
+  #
+  #
+  # Conference
+  #
+  $.ajax {
+    dataType: "json",
+    url: "./Oral.json",
+    success: (data)->
+      new_data = {
+        "articles": data
+      }
+      $('div#conferences ol.articles-list').render(new_data,directive)
+  }
 
-      alert "yada" + data.toString()
+  #
+  #
+  #
+  # Poster
+  #
+  $.ajax {
+    dataType: "json",
+    url: "./Poster.json",
+    success: (data)->
+      new_data = {
+        "articles": data
+      }
+      $('div#posters ol.articles-list').render(new_data,directive)
+  }
+
+  #
+  #
+  #
+  # Invited
+  #
+  $.ajax {
+    dataType: "json",
+    url: "./Invited.json",
+    success: (data)->
+      new_data = {
+        "articles": data
+      }
+      $('div#invited-talks ol.articles-list').render(new_data,directive)
   }
