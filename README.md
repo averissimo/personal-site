@@ -47,8 +47,11 @@ Example files can be found at "example-data" folder
 
 After getting markdown-js and pure
 
-- Run `make all`
+- Run `make all` to compile Coffee script and SASS
+- Create `data` folder with configuration files
 - Open index.html in your browser
+
+Voilá
 
 ### Static version
 
