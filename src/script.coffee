@@ -13,9 +13,10 @@ jQuery ->
   # Info
   #
   $.ajax {
-    dataType: "json",
-    url: "./data/Info.json",
-    success: (data)->
+    dataType: "text",
+    url: "./data/Info.yaml",
+    success: (r_data)->
+      data = jsyaml.load(r_data)
       $('title').render(data.person,title_directive)
       $('meta[name=author]').render(data.person,meta_directive)
       $('meta[name=description]').render(data.person,meta_description_directive)

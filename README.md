@@ -10,14 +10,26 @@ Personal Site
 
 ## Necessary files:
 
+1. data/Info.yaml - YAML file with the personal information
 1. data/description.md - markdown with description
+
+## Other Necessary files
+These can be generated using [Zotero](https://www.zotero.org/)(export as CLS JSON)
+
 1. data/Journal.json - Export from Zotero CSL JSON
 1. data/Oral.json - Export from Zotero CSL JSON
 1. data/Invited.json - Export from Zotero CSL JSON
 1. data/Poster.json - Export from Zotero CSL JSON
 
-example files can be found at "example-data" folder
+Example files can be found at "example-data" folder
 
 ## Usage
 
-You can use it to load content dynamically or generate html locally and use it.
+After getting markdown-js and pure
+
+- Run `make all`
+- Open index.html in your browser
+
+### Static version
+
+As a follow up step you can use the generated html and create a static version of the site. In firefox you have to select everything and then open "View Selection Source", otherwise it will show the version with Pure tags.
