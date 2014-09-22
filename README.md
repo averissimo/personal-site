@@ -1,7 +1,23 @@
 Personal Site
 =============
 
-[Example](http://web.tecnico.ulisboa.pt/andre.verissimo)
+## Motivation
+
+My supervisor was insisting I had to create my personal site, but it was a pain to maintain her own. It was written in pure html and required some skills and time to update.
+
+I didn't want that, neither a big framework to create the page, nor writing pure html. So I simplifly and use files that contain all the content and let the framework worry with the look and structure.
+
+## Description of Solution
+
+Uses configuration files that keep all the information.
+
+- A [YAML](http://en.wikipedia.org/wiki/YAML) file keeps the personal and career information (see below for a snippet)
+- A [Markdown](http://en.wikipedia.org/wiki/Markdown) file keeps a longer description that can be formated using [Markdown Syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+- Several JSON files to keep the publication record.
+
+*note:* I recommend using Zotero to export the publications directly as *CLS JSON*
+
+[Example site](http://web.tecnico.ulisboa.pt/andre.verissimo)
 
 ## Requirements:
 
@@ -10,16 +26,20 @@ Personal Site
 
 ## Necessary files:
 
-1. data/Info.yaml - YAML file with the personal information
-1. data/description.md - markdown with description
+1. Info.yaml - YAML file with the personal information
+1. description.md - Markdown file with description
+
+*(files should be located in data folder)*
 
 ## Other Necessary files
 These can be generated using [Zotero](https://www.zotero.org/)(export as CLS JSON)
 
-1. data/Journal.json - Export from Zotero CSL JSON
-1. data/Oral.json - Export from Zotero CSL JSON
-1. data/Invited.json - Export from Zotero CSL JSON
-1. data/Poster.json - Export from Zotero CSL JSON
+1. Journal.json
+1. Oral.json
+1. Invited.json
+1. Poster.json
+
+*(files should be located in data folder)*
 
 Example files can be found at "example-data" folder
 
@@ -27,8 +47,11 @@ Example files can be found at "example-data" folder
 
 After getting markdown-js and pure
 
-- Run `make all`
+- Run `make all` to compile Coffee script and SASS
+- Create `data` folder with configuration files
 - Open index.html in your browser
+
+Voilá
 
 ### Static version
 
