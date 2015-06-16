@@ -3,10 +3,17 @@ $padding: 20px;
 $gray: #eee;
 $dark-gray: #777;
 
+$break-small: 720px;
+$break-medium: 500px;
+$break-large: 960px;
+
 body {
   background-image: url("../static/background.png");
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.2em;
+  @media screen and (max-width: $break-small) {
+    font-size: .9em;
+  }
 }
 
 h1,h2,h3,h4 {
@@ -46,18 +53,10 @@ ol {
   @extend .padding-r;
 }
 
-#contact img {
-  width: 250px;
-  height: auto;
-}
 
-#who .name {
-  @extend .no-padding-top;
-  @extend .no-margin-top;
-}
 
 #content {
-  width: 960px;
+  max-width: $break-large;
 
   @extend .padding;
 
@@ -73,7 +72,32 @@ ol {
 
 #information {
   float: left;
-  padding-left: $padding;
+  & #who {
+    padding-left: $padding;
+    display: inline-block;
+    & .name {
+    @extend .no-padding-top;
+    @extend .no-margin-top;
+    }
+  }
+
+  & #contact {
+    padding-left: $padding;
+    @media screen and (max-width: $break-medium) {
+      padding-top: 2em;
+      padding-left: 0em;
+    }
+  }
+
+  & #contact img {
+    width: 250px;
+    height: auto;
+    @media screen and (max-width: $break-medium) {
+    }
+  }
+  @media screen and (max-width: $break-medium) {
+    float: none;
+  }
 }
 
 #photo {
@@ -99,10 +123,27 @@ ol {
     height: 50px;
     padding-top: $padding/2;
   }
+  @media screen and (max-width: $break-small) {
+    display: none;
+  }
+  @media screen and (max-width: $break-large) {
+    clear: both;
+    padding-top: 0px;
+    & img {
+      height: 30px;
+    }
+    & li.logos {
+      display:inline-block;
+      padding: 1%;
+    }
+  }
 }
 img.photo {
   padding: 4px;
   border: 1px solid #eee;
+  @media screen and (max-width: $break-small) {
+    width: 150px;
+  }
 }
 
 em {
